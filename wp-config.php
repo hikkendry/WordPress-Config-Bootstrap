@@ -67,9 +67,6 @@ switch(ENVIRONMENT){
 		define('DB_HOST', 'localhost');
 		define('WP_DEBUG', true);
 
-		define('WP_SITEURL', 'http://bootstrap.local/');
-		define('WP_HOME', 'http://bootstrap.local/');
-
 		break;
 
 	case 'development':
@@ -130,6 +127,14 @@ if(!defined('DB_CHARSET'))
 
 if(!defined('DB_COLLATE'))
 	define('DB_COLLATE', '');
+
+// The address where your WordPrss core files live
+// and the publicly accessible URL for the front-end
+if(!defined('WP_SITEURL'))
+	define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/path/to/wordpress');
+
+if(!defined('WP_HOME'))
+	define('WP_HOME',    "http://${_SERVER['SERVER_NAME']}");
 
 
 /**#@+
