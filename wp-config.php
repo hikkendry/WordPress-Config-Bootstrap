@@ -16,7 +16,7 @@
 // Define Environments - may be a string or array of options for an environment
 $environments = array(
 	'local'       => array('.local', 'local.'),
-	'development' => '.dev',
+	'development' => 'dev.',
 	'staging'     => 'stage.',
 	'preview'     => 'preview.',
 );
