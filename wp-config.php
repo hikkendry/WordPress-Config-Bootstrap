@@ -136,6 +136,24 @@ if(!defined('WP_SITEURL'))
 if(!defined('WP_HOME'))
 	define('WP_HOME',    "http://${_SERVER['SERVER_NAME']}");
 
+/**
+ * OPTIONAL: Move wp-content directory
+ * 
+ * You can choose to move and rename the wp-content directory out of
+ * the main Wordpress install directory. The benefits of this are:
+ * 	- Improved security
+ *  - Clean separation of core files and custom files
+ *
+ * Uncomment the following to move your wp-content directory.
+ * If you also want to rename the directory, change the $content_dir
+ * variable to what you want it to be instead.
+ * NB: 
+ */
+if(!defined('WP_CONTENT_DIR'))
+	define('WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'] . '/content');
+	
+if(!defined('WP_CONTENT_URL'))
+	define('WP_CONTENT_URL', 'http://' . $_SERVER['SERVER_NAME'] . '/content');
 
 /**#@+
  * Authentication Unique Keys and Salts.
