@@ -171,8 +171,6 @@ if(!defined('LOGGED_IN_SALT'))
 if(!defined('NONCE_SALT'))
 	define('NONCE_SALT', 'put your unique phrase here');
 
-/**#@-*/
-
 /**
  * WordPress Database Table prefix.
  *
